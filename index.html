@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Задоволення Від Кожного Шматочка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="PageWrapper">
+        <header class="PageHeader">
+            <h1 class="PageTitle">Задоволення Від Кожного Шматочка</h1>
+            <p class="PageSubtitle">Галерея улюблених десертів</p>
+        </header>
+
+        <main class="PageMain">
+            <section class="FiltersAndRecipesSection">
+                <!-- Радіо для фільтра (працюють через CSS :checked) -->
+                <input class="FilterInput" type="radio" name="ProductType" id="FilterAll" checked>
+                <input class="FilterInput" type="radio" name="ProductType" id="FilterCakes">
+                <input class="FilterInput" type="radio" name="ProductType" id="FilterCookies">
+                <input class="FilterInput" type="radio" name="ProductType" id="FilterPies">
+
+                <form class="FilterForm">
+                    <fieldset class="FilterFieldset">
+                        <legend class="FilterLegend">Фільтр За Калорійністю</legend>
+                        <div class="FilterRow">
+                            <label class="FilterLabel">
+                                <span>До 200 ккал</span>
+                                <input class="FilterRangeInput" type="range" min="100" max="600" value="300">
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="FilterFieldset">
+                        <legend class="FilterLegend">Фільтр За Типом Виробу</legend>
+                        <div class="FilterTypeRow">
+                            <label class="FilterTypeLabel" for="FilterAll">Усі</label>
+                            <label class="FilterTypeLabel" for="FilterCakes">Торти</label>
+                            <label class="FilterTypeLabel" for="FilterCookies">Печиво</label>
+                            <label class="FilterTypeLabel" for="FilterPies">Пироги</label>
+                        </div>
+                        <p class="FilterHint">Можна обрати лише один варіант.</p>
+                    </fieldset>
+                </form>
+
+                <section class="RecipeSection">
+                    <h2 class="RecipeSectionTitle">Рецепти</h2>
+
+                    <div class="RecipeGrid">
+                        <!-- Card 1 -->
+                        <article class="RecipeCard RecipeCake">
+                            <div class="RecipeImageWrapper">
+                                <img class="RecipeImage" src="images/chocolate_cake.jpg" alt="Шоколадний торт">
+                            </div>
+                            <div class="RecipeHeader">
+                                <h3 class="RecipeTitle">Шоколадний Торт</h3>
+                                <p class="RecipeMeta">Торт • 350 ккал / порція</p>
+                            </div>
+
+                            <div class="RecipeDivider"></div>
+
+                            <div class="RecipeBody">
+                                <p class="RecipeDescription">
+                                    Насичений шоколадний бісквіт з вершковим кремом. Ідеально смакує з кавою.
+                                </p>
+                                <ul class="RecipeList">
+                                    <li>Борошно</li>
+                                    <li>Какао</li>
+                                    <li>Вершки</li>
+                                    <li>Темний шоколад</li>
+                                </ul>
+                            </div>
+
+                            <div class="RecipeFooter">
+                                <button class="RecipeButton" type="button">Переглянути Рецепт</button>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="RecipeCard RecipeCookie">
+                            <div class="RecipeImageWrapper">
+                                <img class="RecipeImage" src="images/oat_cookies.jpg" alt="Вівсяне печиво">
+                            </div>
+                            <div class="RecipeHeader">
+                                <h3 class="RecipeTitle">Вівсяне Печиво</h3>
+                                <p class="RecipeMeta">Печиво • 180 ккал / порція</p>
+                            </div>
+
+                            <div class="RecipeDivider"></div>
+
+                            <div class="RecipeBody">
+                                <p class="RecipeDescription">
+                                    Хрустке, але м’яке всередині печиво з вівсяних пластівців та родзинками.
+                                </p>
+                                <ul class="RecipeList">
+                                    <li>Вівсяні пластівці</li>
+                                    <li>Вершкове масло</li>
+                                    <li>Родзинки</li>
+                                    <li>Кориця</li>
+                                </ul>
+                            </div>
+
+                            <div class="RecipeFooter">
+                                <button class="RecipeButton" type="button">Переглянути Рецепт</button>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="RecipeCard RecipePie">
+                            <div class="RecipeImageWrapper">
+                                <img class="RecipeImage" src="images/apple_pie.jpg" alt="Яблучний пиріг">
+                            </div>
+                            <div class="RecipeHeader">
+                                <h3 class="RecipeTitle">Яблучний Пиріг</h3>
+                                <p class="RecipeMeta">Пиріг • 250 ккал / порція</p>
+                            </div>
+
+                            <div class="RecipeDivider"></div>
+
+                            <div class="RecipeBody">
+                                <p class="RecipeDescription">
+                                    Класичний домашній пиріг з ароматними яблуками та корицею.
+                                </p>
+                                <ul class="RecipeList">
+                                    <li>Яблука</li>
+                                    <li>Борошно</li>
+                                    <li>Масло</li>
+                                    <li>Кориця</li>
+                                </ul>
+                            </div>
+
+                            <div class="RecipeFooter">
+                                <button class="RecipeButton" type="button">Переглянути Рецепт</button>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 (ще один торт, щоб видно фільтр) -->
+                        <article class="RecipeCard RecipeCake">
+                            <div class="RecipeImageWrapper">
+                                <img class="RecipeImage" src="images/cheesecake.jpg" alt="Чізкейк">
+                            </div>
+                            <div class="RecipeHeader">
+                                <h3 class="RecipeTitle">Ванільний Чізкейк</h3>
+                                <p class="RecipeMeta">Торт • 320 ккал / порція</p>
+                            </div>
+
+                            <div class="RecipeDivider"></div>
+
+                            <div class="RecipeBody">
+                                <p class="RecipeDescription">
+                                    Ніжний сирний десерт на основі пісочного коржа.
+                                </p>
+                                <ul class="RecipeList">
+                                    <li>Сир вершковий</li>
+                                    <li>Яйця</li>
+                                    <li>Вершки</li>
+                                    <li>Ваніль</li>
+                                </ul>
+                            </div>
+
+                            <div class="RecipeFooter">
+                                <button class="RecipeButton" type="button">Переглянути Рецепт</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="PageFooter">
+            <div class="FooterColumn FooterInfo">
+                <p class="FooterText">Лабораторна робота 7–8. Компонування вебсторінок.</p>
+            </div>
+            <div class="FooterColumn FooterLinks">
+                <a class="FooterLink" href="#" target="_blank">Жива Сторінка</a>
+                <a class="FooterLink" href="#" target="_blank">Репозиторій</a>
+            </div>
+            <div class="FooterColumn FooterAuthor">
+                <p class="FooterText">Автор: Прізвище Ім'я, Група</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
